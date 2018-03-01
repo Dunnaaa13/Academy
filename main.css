@@ -9380,32 +9380,22 @@ img {vertical-align: middle;}
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
-/* Box styles */
-.myBox {
-border: none;
-padding: 5px;
-font: 24px/36px sans-serif;
-width: 50px;
-height: 220px;
-overflow: scroll;
+
+* {
+    box-sizing: border-box;
 }
 
-/* Scrollbar styles */
-::-webkit-scrollbar {
-width: 12px;
-height: 12px;
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
 }
 
-::-webkit-scrollbar-track {
-border: 1px solid yellowgreen;
-border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-background: yellowgreen;  
-border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-background: #88ba1c;  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
